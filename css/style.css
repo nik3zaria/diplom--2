@@ -16,9 +16,218 @@
     font-weight: 700;
     font-style: normal;
   }
-  
-  body {
-    min-width: 1200px;
+
+  @media (max-width: 640px) {
+    .content {
+      flex-direction: column;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    .menu-list {
+      display: none;
+    }
+
+    .header-title {
+      width: auto;
+    }
+
+    .news-item {
+      flex-direction: column;
+    }
+
+    .news-item:nth-child(n+1)::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100%;
+      margin: 19px auto 42px auto;
+      background-color: #eeeeee;
+    }
+
+    .trend-list {
+      flex-direction: column;
+    }
+
+    .product-blocks {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product-block {
+      width: 100%;
+      margin-left: 4%;
+    }
+
+    .product-block:nth-child(n+2) {
+      margin-top: 27px;
+    }
+  }
+
+  @media (max-width: 640px) and (orientation: portrait) {
+    .trend-block-img {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) and (orientation: landscape) {
+    .trend-block-img {
+      width: 50%;
+    }
+
+    .trend-block-img:nth-child(n+2) {
+      margin-left: 1%;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1200px) {
+    .menu-list {
+      display: none;
+    }
+
+    .header-menu-logo {
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+
+    .menu-button {
+      align-items: flex-end;
+    }
+
+    .header-title {
+      width: 679px;
+    }
+
+    .trend-list {
+      flex-wrap: wrap;
+    }
+
+    .content {
+      padding-left: 35px;
+      padding-right: 35px;
+    }
+
+    .trend-item-name-link {
+      font-size: 17px;
+    }
+
+    .news-item {
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .news-item:nth-child(n+1):nth-child(-n+4)::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100%;
+      margin: 19px auto 42px auto;
+      background-color: #eeeeee;
+    }
+
+    .news-item-image {
+      width: 100%;
+    }
+
+    .news {
+      width: 70vh;
+    }
+
+    .product-block {
+      width: 45%;
+      margin-left: 4%;
+    }
+
+    .product-block:nth-child(n+3) {
+      margin-top: 28px;
+    }
+
+    .side-content {
+      padding-left: 35px;
+      width: 33.5%;
+    }
+
+    .news-item-info {
+      margin-top: 17px;
+    }
+
+    .product-blocks {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
+    .trend-block-img {
+      width: 45%;
+    }
+
+    .trend-block-img:nth-child(2n + 2) {
+      margin-left: 10%;
+    }
+  }
+
+  @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
+    .trend-block-img {
+      width: 24.25%;
+    }
+
+    .trend-block-img:nth-child(n+2) {
+      margin-left: 1%;
+    }
+  }
+
+  @media (min-width: 1201px) {
+    .menu-button {
+      display: none;
+    }
+
+    .content {
+      min-width: 1200px;
+      padding-left: 15px;
+    }
+
+    .header-title {
+      width: 679px;
+    }
+
+    .news {
+      width: 778px;
+    }
+
+    .news-item:nth-child(n + 2) {
+      margin-top: 59px;
+    }
+
+    .trend-item-name-link {
+      font-size: 24px;
+    }
+
+    .product-block {
+      width: 24%;
+      margin-left: 4%;
+    }
+
+    .side-content {
+      margin-left: 120px;
+      padding-right: 15px;
+      width: 272px;
+    }
+
+    .news-item-info {
+      box-sizing: border-box;
+      margin-left: 30px;
+      padding-top: 0;
+    }
+
+    .header-menu-logo {
+      min-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .social-networks {
+      width: 1170px;
+    }
   }
   
   .bold {
@@ -34,7 +243,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     position: relative;
-    background-image: url(img\banner-bg.jpg);
+    background-image: url(file:///C:/Users/NNCherepanov/Desktop/diplom%20-2/img/banner-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -57,12 +266,9 @@
   
   .header-menu-logo {
     display: flex;
-    min-width: 1200px;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
   }
   
   .logo {
@@ -82,7 +288,6 @@
   .header-title {
     font-size: 45px;
     text-align: center;
-    width: 679px;
   }
   
   .menu {
@@ -91,6 +296,47 @@
     list-style: none;
     font-size: 13px;
     color: #ffffff;
+  }
+
+  .menu-button {
+    position: relative;
+    border: none;
+    width: 1.4em;
+    height: 1em;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-color: transparent;
+    padding: 0;
+    font-size: 25px;
+  }
+
+  .menu-button:before, .menu-button:after {
+    content: "";
+    width: 100%;
+    height: 20%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+  }
+
+  .menu-button:before {
+    top: 0;
+  }
+
+  .menu-button:after {
+    bottom: 0;
+  }
+
+  .menu-button-label {
+    width: 100%;
+    height: 20%;
+    margin-top: -0.1em;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 50%;
   }
   
   .menu-list-item {
@@ -106,30 +352,107 @@
     color: #ffffff;
     text-decoration: none;
   }
+
+  .trend {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+  }
   
+  .trend-name {
+    font-size: 20px;
+    color: #0f0d0e;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .trend-name:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 67px;
+    margin: 14px auto 28px auto;
+    background-color: #e1d9bd;
+  }
+
+  .trend-list {
+    display: flex;
+  }
+
+  .trend-block-img {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+  }
+
+  .trend-block-img:before {
+    content: "";
+    position: absolute;
+    height: 99%;
+    width: 99%;
+    top: 0;
+    background-color: #000000;
+    opacity: 0.5;
+    z-index: 2;
+  }
+
+  .trend-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .trend-img:nth-child(n + 1):nth-child(-n+3) {
+    margin-right: 4px;
+  }
+
+  .trend-block {
+    position: absolute;
+    border: 3px solid #93855c;
+    margin: 0 22px 16px 22px;
+    z-index: 3;
+  }
+
+  .article-trend-link {
+    margin-right: 20px;
+    font-size: 14px;
+    color: #b59f5b;
+    text-decoration: none;
+  }
+
+  .article-trend {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .trend-item-name {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+
+  .trend-item-name-link {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
   .content {
     display: flex;
     margin-top: 64px;
-    padding-left: 15px;
-    min-width: 1200px;
     justify-content: center;
-  }
-  
-  .news {
-    width: 778px;
   }
   
   .news-item {
     display: flex;
   }
   
-  .news-item:nth-child(n + 2) {
-    margin-top: 59px;
-  }
-  
   .news-item-image {
     box-sizing: border-box;
-    background-size: cover;
     width: 381px;
     position: relative;
   }
@@ -144,12 +467,6 @@
     background-color: #eff6f1;
     opacity: 1;
     z-index: -1;
-  }
-  
-  .news-item-info {
-    box-sizing: border-box;
-    margin-left: 30px;
-    padding-top: 0;
   }
   
   .article-tags {
@@ -204,19 +521,12 @@
     color: #0f0d0e;
   }
   
-  .side-content {
-    right: 245px;
-    width: 272px;
-    padding-right: 15px;
-    margin-left: 120px;
-  }
-  
   .news-posts {
     text-transform: uppercase;
     font-weight: bold;
-    padding-left: 87px;
     font-size: 14px;
     color: #0f0d0e;
+    text-align: center;
   }
   
   .news-posts:after {
@@ -224,9 +534,7 @@
     display: block;
     height: 3px;
     width: 66px;
-    margin-left: 20px;
-    margin-top: 14px;
-    margin-bottom: 29px;
+    margin: 14px auto 29px auto;
     background-color: #e1d9bd;
   }
   
@@ -247,7 +555,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 50%;
     top: 0;
     left: 0;
     background-color: #f4f7f6;
@@ -283,6 +591,11 @@
     margin-top: 60px;
     position: relative;
     margin-left: 1px;
+    justify-content: flex-end;
+  }
+
+  .search-group {
+    width: 100%;
   }
   
   .visually-hidden {
@@ -295,7 +608,7 @@
   .field {
     box-sizing: border-box;
     padding-left: 14px;
-    width: 270px;
+    width: 100%;
     height: 48px;
     border: none;
     background-color: #f4f7f6;
@@ -307,15 +620,16 @@
   .button-search {
     width: 48px;
     height: 48px;
-    color: #ffffff;
     border: none;
     background-color: #b59f5b;
-    background-image: url(svg\search.svg);
-    background-size: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute;
     right: 0;
+  }
+
+  .button-search-svg {
+    height: 18px;
+    width: 18px;
+    fill: #ffffff;
   }
   
   .mailing-text {
@@ -332,7 +646,7 @@
     display: block;
     height: 3px;
     width: 66px;
-    margin: 14px 0 23px 106px;
+    margin: 14px auto 23px auto;
     background-color: #e1d9bd;
   }
   
@@ -344,7 +658,7 @@
   }
   
   .button {
-    width: 270px;
+    width: 100%;
     height: 48px;
     color: #ffffff;
     border: none;
@@ -445,6 +759,114 @@
     font-size: 12px;
     vertical-align: super;
   }
+
+  .products {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+  }
+
+  .products-header {
+    font-size: 20px;
+    color: #0f0d0e;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .products-header:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 67px;
+    margin: 10px auto 28px auto;
+    background-color: #e1d9bd;
+  }
+
+  .product-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-blocks {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .product-body {
+    display: flex;
+    border: 3px solid #d3c59d;
+    z-index: 1;
+    position: relative;
+    padding: 50px 21px 26px 21px;
+    margin-top: -35px;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .product-title {
+    text-transform: uppercase;
+    color: #0f0d0e;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .product-description {
+    font-size: 15px;
+    color: #0f0d0e;
+  }
+
+  .product-imgbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-img {
+    z-index: 0;
+    position: relative;
+    top: 0;
+  }
+
+  .product-description-link {
+    text-decoration: none;
+    color: #b59f5b;
+  }
+
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 27px;
+  }
+
+  .product-prices {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-price-old {
+    font-size: 14px;
+    text-decoration: line-through;
+  }
+
+  .product-price {
+    font-size: 20px;
+    color: #0f0d0e;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .product-button {
+    background-color: #b59f5b;
+    border: none;
+    width: 140px;
+    height: 48px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
   
   .footer {
     display: flex;
@@ -452,15 +874,15 @@
     flex-direction: column;
     padding: 0 0 41px 0;
     margin-top: 64px;
-    min-width: 1200px;
     font-weight: bold;
+    margin-left: 5%;
+    margin-right: 5%;
   }
   .social-networks {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     justify-content: center;
-    width: 1170px;
     background-color: #f4f7f6;
     margin-left: auto;
     margin-right: auto;
@@ -469,10 +891,6 @@
   
   .social-icon-pinterest {
     display: inline-block;
-    background-image: url(svg\001-pinterest.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     height: 25px;
     width: 25px;
     margin-top: 31px;
@@ -480,21 +898,13 @@
   
   .social-icon-facebook {
     display: inline-block;
-    background-image: url(svg\002-facebook-logo.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 25px;
-    width: 25px;
+    max-width: 25px;
+    max-height: 25px;
     margin-top: 31px;
   }
   
   .social-icon-tumblr {
     display: inline-block;
-    background-image: url(svg\003-tumblr.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     height: 25px;
     width: 25px;
     margin-top: 31px;
@@ -502,10 +912,6 @@
   
   .social-icon-Twitter {
     display: inline-block;
-    background-image: url(svg\004-twitter.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     height: 25px;
     width: 25px;
     margin-top: 31px;
@@ -513,10 +919,6 @@
   
   .social-icon-instagram {
     display: inline-block;
-    background-image: url(svg\005-instagram.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     height: 25px;
     width: 25px;
     margin-top: 31px;
