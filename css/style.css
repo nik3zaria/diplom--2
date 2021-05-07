@@ -141,10 +141,6 @@
       cursor: pointer;
     }
 
-    .trend-item-name-link:hover {
-      background-color: #0f8fee;
-    }
-
     .news-item {
       flex-wrap: wrap;
       width: 100%;
@@ -319,13 +315,6 @@
     background-color: #ffffff;
   }
 
-  .content-body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-
   .popup-name {
     font-size: 20px;
     color: #0f0d0e;
@@ -476,10 +465,6 @@
     cursor: pointer;
   }
 
-  .header-logo-svg:hover {
-    background-color: #0f8fee;
-  }
-
   .header-menu-logo {
     display: flex;
     align-items: center;
@@ -527,10 +512,6 @@
     cursor: pointer;
   }
 
-  .menu-button:hover {
-    background-color: #0f8fee;
-  }
-
   .menu-button:before, .menu-button:after {
     content: "";
     width: 100%;
@@ -576,7 +557,7 @@
   }
 
   .menu-link:hover {
-    background-color: #0f8fee;
+    text-decoration: underline;
   }
 
   .trend {
@@ -633,10 +614,10 @@
   .trend-block {
     position: absolute;
     border: 3px solid #93855c;
-    margin: 3%;
     padding: 3%;
-    width: 88%;
     z-index: 1;
+    box-sizing: border-box;
+    margin: 0 20px 20px 20px;
   }
 
   .article-trend-link {
@@ -647,7 +628,7 @@
   }
 
   .article-trend-link:hover {
-    background-color: #0f8fee;
+    text-decoration: underline;
   }
 
   .article-trend {
@@ -676,7 +657,7 @@
   }
 
   .trend-item-name-link:hover {
-    background-color: #0f8fee;
+    color: #b59f5b;
   }
 
   .content {
@@ -710,6 +691,10 @@
     z-index: -1;
   }
 
+  .news-item-name-link:hover {
+    color: #b59f5b;
+  }
+
   .news-img {
     width: 100%;
   }
@@ -730,7 +715,7 @@
   }
 
   .article-tag-link:hover {
-    background-color: #0f8fee;
+    text-decoration: underline;
   }
   
   .news-item-name {
@@ -745,10 +730,6 @@
     font-size: 20px;
     text-decoration: none;
     cursor: pointer;
-  }
-
-  .news-item-name-link:hover {
-    background-color: #0f8fee;
   }
   
   .news-item-time {
@@ -835,10 +816,6 @@
     text-decoration: none;
     cursor: pointer;
   }
-
-  .post-title-link:hover {
-    background-color: #0f8fee;
-  }
   
   .search {
     display: flex;
@@ -888,7 +865,7 @@
   }
 
   .button-search:hover {
-    background-color: #0f8fee;
+    background-color: #313131;
   }
 
   .mailing-form {
@@ -931,7 +908,7 @@
   }
 
   .button:hover {
-    background-color: #0f8fee;
+    background-color: #313131;
   }
   
   .block-tags {
@@ -983,7 +960,7 @@
   }
 
   .tag-link:hover {
-    background-color: #0f8fee;
+    border: 3px solid #b59f5b;
   }
   
   .tag-link:nth-child(n + 4) {
@@ -1038,7 +1015,7 @@
   }
 
   .topic-link:hover {
-    background-color: #0f8fee;
+    color: #b59f5b;
   }
   
   .articles {
@@ -1121,7 +1098,7 @@
   }
 
   .product-description-link:hover {
-    background-color: #0f8fee;
+    text-decoration: underline;
   }
 
   .product-footer {
@@ -1160,7 +1137,7 @@
   }
 
   .product-button:hover {
-    background-color: #0f8fee;
+    background-color: #313131;
   }
   
   .footer {
@@ -1196,10 +1173,6 @@
     width: 25px;
     cursor: pointer;
   }
-
-  .social-icon-pinterest:hover {
-    background-color: #0f8fee;
-  }
   
   .social-icon-facebook {
     display: inline-block;
@@ -1210,10 +1183,6 @@
     width: 25px;
     height: 25px;
     cursor: pointer;
-  }
-
-  .social-icon-facebook:hover {
-    background-color: #0f8fee;
   }
   
   .social-icon-tumblr {
@@ -1226,10 +1195,6 @@
     width: 25px;
     cursor: pointer;
   }
-
-  .social-icon-tumblr:hover {
-    background-color: #0f8fee;
-  }
   
   .social-icon-Twitter {
     display: inline-block;
@@ -1241,10 +1206,6 @@
     width: 25px;
     cursor: pointer;
   }
-
-  .social-icon-Twitter:hover {
-    background-color: #0f8fee;
-  }
   
   .social-icon-instagram {
     display: inline-block;
@@ -1255,10 +1216,6 @@
     height: 25px;
     width: 25px;
     cursor: pointer;
-  }
-
-  .social-icon-instagram:hover {
-    background-color: #0f8fee;
   }
   
   .social-link {
