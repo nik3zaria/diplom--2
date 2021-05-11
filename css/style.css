@@ -70,7 +70,6 @@
 
     .product-block {
       width: 100%;
-      margin-left: 4%;
     }
 
     .product-block:nth-child(n+2) {
@@ -165,10 +164,10 @@
     }
 
     .product-block {
-      width: 45%;
+      width: 48%;
     }
 
-    .product-block:nth-child(n+2) {
+    .product-block:nth-child(2n+2) {
       margin-left: 4%;
     }
 
@@ -260,11 +259,11 @@
     }
 
     .product-block {
-      width: 24%;
+      width: 30%;
     }
 
     .product-block:nth-child(n+2) {
-      margin-left: 4%;
+      margin-left: 5%;
     }
 
     .side-content {
@@ -301,6 +300,27 @@
     background-color: #000000;
     opacity: 0.5;
     z-index: 2;
+  }
+
+  .popup-close {
+    width: 22px;
+    height: 20px;
+    position: absolute;
+    top: -24px;
+    right: 0;
+    background-image: url(../svg/form-x.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+  }
+
+  .popup-close:hover {
+    background-color: #b59f5b;
   }
 
   .popup {
@@ -422,7 +442,9 @@
     border: none;
     background-color: #ededed;
     outline: 0;
-    width: 100%;
+    max-width: 331px;
+    min-width: 300px;
+    min-height: 100px;
     padding-left: 5px;
     padding-top: 3px;
   }
@@ -835,6 +857,7 @@
     height: 1px;
     clip: rect(1px, 1px, 1px, 1px);
     position: absolute;
+    font-size: 0
   }
   
   .field {
@@ -1028,6 +1051,10 @@
     display: flex;
     flex-direction: column;
     margin-top: 64px;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .products-header {
